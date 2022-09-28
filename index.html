@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Play | BlackJack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/elements.cardmeister.full.js"></script>
+  </head>
+  <body>
+    <div class="nav">
+        <button class="btn-connect" id="btn-connect" onclick="connect()">CONNECT</button>
+    </div>
+
+    <!-- black jack layout-->
+    <div class ="main-box">
+        <h2>DeFi Blackjack on Arbitrum</h2>  
+        <div class="table">
+            <br>
+            <div class="dealer" id="dealer-cards">
+            </div>
+            <div class="dealer">
+                <h3 id="dealer-score">Player Score</h3>
+            </div>               
+            <br>
+            <div class="result">
+                <h2 id="result">Result</h2>
+            </div>
+            <br>
+            <div class="player"id="player-cards">
+            </div>
+            <br>
+            <div class="player">
+                <h3 id="player-score">Player Score</h3>
+            </div>   
+
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn-hit" id="btn-hit" onclick="hit()">HIT</button>
+        <button class="btn-stand" id="btn-stand" onclick="stand()">STAND</button>
+        <button class="btn-double" id="btn-double" onclick="double()">DOUBLE</button>
+    </div>
+    <div class="bets">
+        <!-- bet amount input-->
+        <h3>WAGER ETH:</h3>
+        <input type="number" id="bet-amount" name="bet-amount" min="0.001" max="0.01" value="0.001">
+        <button class="btn-new" id="btn-new" onclick="bet()">BET</button>
+        <div>
+            <h3 class="balance" id="minbet">Min Bet: 0.001</h3>
+            <h3 class="balance" id="maxbet">Max Bet: 0.01</h3>
+        </div>
+
+    </div>
+
+
+
+    <p class="balance" id="balance">balance</p> 
+    <p class="balance" id="poolbalance">balance</p> 
+
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+  
+
+    <!-- use index.css-->
+    <link rel="stylesheet" href="./style/index.css">
+
+  </body>
+</html>
