@@ -759,23 +759,9 @@ async function bet() {
     // get value from input
     const betAmount = document.getElementById("bet-amount").value;
 
-    //make sure bet is less than walllet balance >= than min bet of 0.001 and <= max bet of 0.1
-    const walletBalance = await provider.getBalance(signer.getAddress());
-	var minBet = await blackjackCaller.minBet();
-	var maxBet = await blackjackCaller.maxBet();
-    if (betAmount > minBet || betAmount < maxBet) {
-        alert("Bet must be between" + minBet + " and " + maxBet + " ETH");
-        return;
-    }
-
-    if (betAmount > ethers.utils.formatEther(walletBalance)) {
-        alert("Bet must be less than wallet balance");
-        return;
-    }
-
 
     //call bet function
-    const betTx = await blackjackContract._play({value: ethers.utils.parseEther(betAmount), gasLimit: 750000});
+    const betTx = await blackjackContract._play({value: ethers.utils.parseEther(betAmount), gasLimit: 950000});
     console.log("Bet tx: ", betTx.hash);
 
 
@@ -783,13 +769,13 @@ async function bet() {
 
 async function hit() {
     //call hit function
-    const hitTx = await blackjackContract._Hit({gasLimit: 750000});
+    const hitTx = await blackjackContract._Hit({gasLimit: 950000});
     console.log("Hit tx: ", hitTx.hash);
 }
 
 async function stand() {
     //call stand function
-    const standTx = await blackjackContract._Stand({gasLimit: 750000});
+    const standTx = await blackjackContract._Stand({gasLimit: 950000});
     console.log("Stand tx: ", standTx.hash);
 }
 
@@ -797,7 +783,7 @@ async function double() {
     //call doubleDown function
     const betAmount = await blackjackContract.betAmount(signer.getAddress());
     console.log("Bet Amount: ", betAmount.toString());
-    const doubleDownTx = await blackjackContract._Double({value: betAmount.toString(), gasLimit: 750000});
+    const doubleDownTx = await blackjackContract._Double({value: betAmount.toString(), gasLimit: 950000});
     console.log("Double Down tx: ", doubleDownTx.hash);
 }
 
