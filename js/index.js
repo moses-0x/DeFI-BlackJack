@@ -734,21 +734,24 @@ async function getGameStatus() {
         await loadCards();
 
         //if player-score is higher than dealer-score, player wins
-        var playerPower = document.getElementById("player-score").innerText;
-        var dealerPower = document.getElementById("dealer-score").innerText;
+        var playerPower = parseInt(document.getElementById("player-score").innerText);
+        var dealerPower = parseInt(document.getElementById("dealer-score").innerText);
+
 
         if(playerPower > dealerPower && playerPower <= 21){
           document.getElementById("result").innerText = "Player Wins!";
+		  console.log("player wins");
           
         }
         else if(playerPower < dealerPower && dealerPower > 21){
           document.getElementById("result").innerText = "Player Wins!";
+
         }
         else if(playerPower == dealerPower){
           document.getElementById("result").innerText = "Push.";
         }
         else{
-          document.getElementById("result").innerText = "Dealer Wins :D";
+          document.getElementById("result").innerText = "Dealer Wins :(";
         }
 
     }
