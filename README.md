@@ -12,4 +12,7 @@
     CHIPZ Tokens are also listed on Sushiswap.
     The ArbBlackjack Contract which uses profits to buy CHIPZ Tokens and burn them.
 
-    Join the Discord: https://discord.gg/fkczvXRnE3
+
+
+
+   Join the Discord: https://discord.gg/fkczvXRnE3
