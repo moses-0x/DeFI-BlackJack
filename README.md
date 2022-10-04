@@ -4,6 +4,9 @@
 
 Hosted on IPFS Here: https://morning-field-4798.on.fleek.co/
 
+CONTRACT : https://arbiscan.io/address/0xaf117063543f0fec7147dd0300d8df8d03cfd059#code
+
+
 $CHIPZ: https://dexscreener.com/arbitrum/0x850ef5d8c1e3a874cefaa081ccc379d044da8c58
 
 Join the Discord: https://discord.gg/fkczvXRnE3
